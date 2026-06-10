@@ -1,4 +1,4 @@
-# 🎤 AI Mock Interviewer
+AI Mock Interviewer
 
 A full-stack AI-powered interview practice app. Pick a role, answer questions, and get instant feedback — powered by **Groq + Llama 3.3 70B** (free & fast).
 
@@ -82,25 +82,6 @@ npm run dev
 
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:5000/api
-
----
-
-## API Reference
-
-### `POST /api/interview/start`
-**Body:** `{ role, level, questionCount }`
-**Response:** `{ sessionId, questions[], role, level, totalQuestions }`
-
-### `POST /api/interview/:sessionId/answer`
-**Body:** `{ questionIndex, answer }`
-**Response:** `{ feedback: { score, label, summary, strengths[], improvements[], tip } }`
-
-### `POST /api/interview/:sessionId/complete`
-**Response:** `{ summary: { overallVerdict, topStrength, topGrowthArea, readinessLevel, nextSteps[] }, averageScore }`
-
-### `GET /api/sessions` — list all sessions
-### `GET /api/sessions/:id` — full session detail
-### `DELETE /api/sessions/:id` — delete a session
 
 ---
 
